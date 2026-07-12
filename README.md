@@ -10,6 +10,7 @@ The canonical technical provenance spine remains `dbottrader/Holbrook-CP8-HHC`.
 
 ## Public Briefs
 
+- [Browser-View Executive Brief](briefs/2026-07-11_CP8_WEAVER_EXECUTIVE_BRIEF.html)
 - [ASIN-HHC / CP8 + Weaver OS — Elevator Pitch](briefs/2026-07-11_CP8_WEAVER_ELEVATOR_PITCH.md)
 - [ASIN-HHC / CP8 + Weaver OS — Executive Summary](briefs/2026-07-11_CP8_WEAVER_EXECUTIVE_SUMMARY.md)
 - [Ryan Group Reply — Copy-Ready Text](handoffs/2026-07-11_RYAN_REPLY_COPY.txt)
