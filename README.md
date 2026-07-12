@@ -4,9 +4,15 @@ Public collaboration and audit chronology repository for CP8 / ASIN-HHC work.
 
 ## Role
 
-This repository stores dated collaboration records, decision notes, milestone notes, roadmap records, and agent handoff records.
+This repository stores dated collaboration records, decision notes, milestone notes, roadmap records, agent handoff records, and public collaboration briefs.
 
 The canonical technical provenance spine remains `dbottrader/Holbrook-CP8-HHC`.
+
+## Public Briefs
+
+- [ASIN-HHC / CP8 + Weaver OS — Elevator Pitch](briefs/2026-07-11_CP8_WEAVER_ELEVATOR_PITCH.md)
+- [ASIN-HHC / CP8 + Weaver OS — Executive Summary](briefs/2026-07-11_CP8_WEAVER_EXECUTIVE_SUMMARY.md)
+- [Ryan Group Reply — Copy-Ready Text](handoffs/2026-07-11_RYAN_REPLY_COPY.txt)
 
 ## Recommended Layout
 
@@ -17,8 +23,9 @@ The canonical technical provenance spine remains `dbottrader/Holbrook-CP8-HHC`.
 /logs/
 /roadmaps/
 /handoffs/
+/briefs/
 ```
 
 ## Boundary
 
-Public entries should be curated, dated, and scoped to provenance or collaboration history.
+Public entries should be curated, dated, and scoped to provenance or collaboration history. Artifact-specific authorship and contribution boundaries should be preserved.
