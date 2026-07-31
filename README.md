@@ -6,7 +6,15 @@ Public collaboration and audit chronology repository for CP8 / ASIN-HHC work.
 
 This repository stores dated collaboration records, decision notes, milestone notes, roadmap records, agent handoff records, and public collaboration briefs.
 
-The canonical technical provenance spine remains `dbottrader/Holbrook-CP8-HHC`.
+The canonical technical provenance spine remains [`dbottrader/Holbrook-CP8-HHC`](https://github.com/dbottrader/Holbrook-CP8-HHC).
+
+Canonical chronology and citation:
+
+- [`PUBLIC_PROVENANCE_RECORD.md`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/docs/PUBLIC_PROVENANCE_RECORD.md)
+- [`public-record.json`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/provenance/public-record.json)
+- [`CITATION.cff`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/CITATION.cff)
+
+For chronology-sensitive claims, cite the dated collaboration record, exact artifact path, and full commit SHA. Collaboration records preserve contribution history without collapsing authorship boundaries.
 
 ## Public Briefs
 
@@ -29,4 +37,4 @@ The canonical technical provenance spine remains `dbottrader/Holbrook-CP8-HHC`.
 
 ## Boundary
 
-Public entries should be curated, dated, and scoped to provenance or collaboration history. Artifact-specific authorship and contribution boundaries should be preserved.
+Public entries should be curated, dated, and scoped to provenance or collaboration history. Artifact-specific authorship and contribution boundaries should be preserved. Similarity to another project is treated as conceptual convergence unless direct derivation is independently demonstrated.
