@@ -1,0 +1,22 @@
+[Unit]
+Description=CP8 Kernel Orchestrator
+After=network.target
+Requires=asin-hhc-bridge.service
+
+[Service]
+Type=simple
+User=bridge
+Group=bridge
+WorkingDirectory=/opt/asin-hhc-bridge/cp8
+Environment=PYTHONPATH=/opt/asin-hhc-bridge/cp8
+Environment=CP8_DATA_DIR=/opt/asin-hhc-bridge/cp8_data
+Environment=CP8_TELEMETRY_DIR=/dev/shm/cp8_telemetry
+Environment=CP8_LOG_DIR=/var/log/asin-hhc-bridge/cp8
+ExecStart=/usr/bin/python3 -m cp8_cli investigate "system_ready_check"
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/log/asin-hhc-bridge/cp8/orchestrator.log
+StandardError=append:/var/log/asin-hhc-bridge/cp8/orchestrator.error.log
+
+[Install]
+WantedBy=multi-user.target
