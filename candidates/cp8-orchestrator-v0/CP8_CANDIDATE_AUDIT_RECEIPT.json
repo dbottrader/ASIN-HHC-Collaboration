@@ -1,0 +1,69 @@
+{
+  "schema": "CP8-CANDIDATE-AUDIT-v1",
+  "generated_at_utc": "2026-08-17T22:00:37Z",
+  "artifact": "CP8 orchestration runtime candidate v0",
+  "provenance": "Code blocks relayed by Dennis from an external agent response; external model identity not cryptographically attested.",
+  "source_files": {
+    "cp8_schema.py": "ca4a3e33b19d85abda774c5cc6f91b62939414108777de6e2347ea6f75b11a4e",
+    "cp8_storage.py": "4846d0602d1bf9eb1624e61efecaeb1252d65a9e11e8b7250bd072ba9bbb6634",
+    "cp8_kernel.py": "b9e89eac02c0844e91ee225a5928592330f70ae779d76ee7888f6d84ec4c877f",
+    "cp8_agents.py": "7b202a1829f1809d0ddbe8b44c55a4237dfb7cdc172b5deb62c3613bc5ea602b",
+    "cp8_orchestrator.py": "dc7f99479d6b34f6742c376f4d40c14a61f416365134382152f43c02f0ec4160",
+    "cp8_cli.py": "e5d07137304bd16f3ffa1229b1cd27bad6f2c894172c229f6b7137982952487a",
+    "cp8_systemd.service": "8994ea0cc453a71176015486073641e2a747fdb303eceae7461d033a505e6415"
+  },
+  "test_file": {
+    "tests/test_candidate_smoke.py": "91fd5ee017874806a82c5de6d30f456155a9445ceae4b8200b7fabce3bbb3ffb"
+  },
+  "tests": [
+    {
+      "test": "Python compileall",
+      "result": "PASS",
+      "scope": "Syntax only"
+    },
+    {
+      "test": "Direct CP8Orchestrator construction",
+      "result": "FAIL_AS_EXPECTED",
+      "evidence": "ACESynthesisAgent is abstract because it does not implement CP8Agent.execute."
+    },
+    {
+      "test": "One-branch investigate smoke after test-only abstract-class bypass",
+      "result": "FAIL_AS_EXPECTED",
+      "evidence": "AttributeError: SYNTHESIS because CP8Stage has no SYNTHESIS member."
+    },
+    {
+      "test": "Content hash path guard in an isolated temporary directory",
+      "result": "FAIL_AS_EXPECTED",
+      "evidence": "retrieve('../secret') read JSON outside the configured base/objects path."
+    }
+  ],
+  "accepted_properties": [
+    "CP8Job.transition_to rejects normal first-stage, skip, and reorder violations when it is actually used.",
+    "FiveFieldClaim string fields are frozen.",
+    "Restricted JSON-safe payloads receive repeatable sorted-key serialization within this Python implementation.",
+    "The conceptual default promotion verdict is HOLD.",
+    "Temporary-file write plus fsync plus os.replace gives atomic visibility for one cooperative writer."
+  ],
+  "blocking_findings": [
+    "The orchestrator cannot be instantiated because ACESynthesisAgent remains abstract.",
+    "The lifecycle lacks SYNTHESIS, so investigate cannot complete even after bypassing the constructor blocker.",
+    "Stages are auto-advanced after work and do not govern actual agent execution.",
+    "The path guard is unused and content hashes/namespaces are not validated.",
+    "Promotion trusts a caller-supplied gate_keeper and creates no verified signature.",
+    "The store trusts caller-supplied hashes and is not deeply immutable or concurrency-safe.",
+    "The Merkle root excludes archivist and promotion history.",
+    "Branch isolation is an in-process interface convention, not an enforced security boundary.",
+    "Preregistration is printed but not persisted before execution.",
+    "The systemd unit is a crash-looping one-shot command, not a persistent service."
+  ],
+  "claim_verdicts": {
+    "production_hardened": "FAIL",
+    "cannot_be_bypassed": "FAIL",
+    "immutable_content_addressed_store": "FAIL",
+    "cryptographic_promotion_receipt": "FAIL",
+    "candidate_source_recovered_and_hash_bound": "PASS"
+  },
+  "evidence_level": "E2_FAILURE_REPRODUCTION",
+  "promotion": "HOLD",
+  "smallest_safe_next_action": "Create a new v0.1 patch branch that first fixes constructor/lifecycle blockers and adds regression tests; do not deploy or overwrite this frozen candidate."
+}
